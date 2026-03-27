@@ -1,189 +1,330 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CurrículoGen | Linhagem SPARK | Mauricio Peixoto</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
     <header class="navbar-spark">
-        <div class="nav-container">
-            <div class="brand">
-                <img src="currículoGen.jpg" alt="CurrículoGen logo" class="logo">
-                <div class="title-group">
-                    <h1>CurrículoGen</h1>
-                </div>
-            </div>
+      <div class="nav-container">
+        <div class="brand">
+          <img src="currículoGen.jpg" alt="CurrículoGen logo" class="logo" />
+          <div class="title-group">
+            <h1>CurrículoGen</h1>
+          </div>
         </div>
+      </div>
     </header>
 
     <div class="main-wrapper">
-        <aside class="editor">
-            
-            <div class="input-card">
-                <h3><i class="fas fa-briefcase"></i> Segmento Profissional</h3>
-                <div class="form-group">
-                    <select id="f-profissao" class="full-input" onchange="sync()">
-                        <option value="">Selecione sua especialidade...</option>
-                        
-                        <optgroup label="TECNOLOGIA E SOFTWARE">
-                            <option value="Desenvolvedor Full Stack">Desenvolvedor Full Stack</option>
-                            <option value="Engenheiro de Software">Engenheiro de Software</option>
-                            <option value="Analista de Sistemas">Analista de Sistemas</option>
-                            <option value="Analista de Cybersegurança">Analista de Cybersegurança</option>
-                            <option value="Desenvolvedor Mobile (Flutter/React)">Desenvolvedor Mobile</option>
-                            <option value="Cientista de Dados">Cientista de Dados</option>
-                            <option value="Engenheiro de Dados">Engenheiro de Dados</option>
-                            <option value="Administrador de Banco de Dados (DBA)">DBA</option>
-                            <option value="Especialista em Cloud Computing">Especialista em Cloud</option>
-                            <option value="UX/UI Designer">UX/UI Designer</option>
-                            <option value="Técnico de Suporte TI">Técnico de Suporte TI</option>
-                            <option value="Analista de QA / Tester">Analista de QA</option>
-                            <option value="DevOps Engineer">DevOps Engineer</option>
-                        </optgroup>
+      <aside class="editor">
+        <div class="input-card">
+          <h3><i class="fas fa-briefcase"></i> Segmento Profissional</h3>
+          <div class="form-group">
+            <select id="f-profissao" class="full-input" onchange="sync()">
+              <option value="">Selecione sua especialidade...</option>
 
-                        <optgroup label="SEGURANÇA E DEFESA">
-                            <option value="Perito Criminal Federal">Perito Criminal Federal</option>
-                            <option value="Analista de Inteligência">Analista de Inteligência</option>
-                            <option value="Delegado de Polícia">Delegado de Polícia</option>
-                            <option value="Investigador de Polícia">Investigador de Polícia</option>
-                            <option value="Agente de Segurança Cibernética">Agente de Segurança Cibernética</option>
-                        </optgroup>
+              <optgroup label="TECNOLOGIA E SOFTWARE">
+                <option value="Desenvolvedor Full Stack">
+                  Desenvolvedor Full Stack
+                </option>
+                <option value="Engenheiro de Software">
+                  Engenheiro de Software
+                </option>
+                <option value="Analista de Sistemas">
+                  Analista de Sistemas
+                </option>
+                <option value="Analista de Cybersegurança">
+                  Analista de Cybersegurança
+                </option>
+                <option value="Desenvolvedor Mobile (Flutter/React)">
+                  Desenvolvedor Mobile
+                </option>
+                <option value="Cientista de Dados">Cientista de Dados</option>
+                <option value="Engenheiro de Dados">Engenheiro de Dados</option>
+                <option value="Administrador de Banco de Dados (DBA)">
+                  DBA
+                </option>
+                <option value="Especialista em Cloud Computing">
+                  Especialista em Cloud
+                </option>
+                <option value="UX/UI Designer">UX/UI Designer</option>
+                <option value="Técnico de Suporte TI">
+                  Técnico de Suporte TI
+                </option>
+                <option value="Analista de QA / Tester">Analista de QA</option>
+                <option value="DevOps Engineer">DevOps Engineer</option>
+              </optgroup>
 
-                        <optgroup label="SAÚDE E MEDICINA">
-                            <option value="Médico Clínico Geral">Médico Clínico Geral</option>
-                            <option value="Enfermeiro Padrão">Enfermeiro Padrão</option>
-                            <option value="Técnico em Enfermagem">Técnico em Enfermagem</option>
-                            <option value="Fisioterapeuta">Fisioterapeuta</option>
-                            <option value="Farmacêutico">Farmacêutico</option>
-                            <option value="Psicólogo Clínico">Psicólogo Clínico</option>
-                            <option value="Nutricionista Esportivo">Nutricionista Esportivo</option>
-                            <option value="Biomédico">Biomédico</option>
-                        </optgroup>
+              <optgroup label="SEGURANÇA E DEFESA">
+                <option value="Perito Criminal Federal">
+                  Perito Criminal Federal
+                </option>
+                <option value="Analista de Inteligência">
+                  Analista de Inteligência
+                </option>
+                <option value="Delegado de Polícia">Delegado de Polícia</option>
+                <option value="Investigador de Polícia">
+                  Investigador de Polícia
+                </option>
+                <option value="Agente de Segurança Cibernética">
+                  Agente de Segurança Cibernética
+                </option>
+              </optgroup>
 
-                        <optgroup label="ENGENHARIA E INDÚSTRIA">
-                            <option value="Engenheiro Civil">Engenheiro Civil</option>
-                            <option value="Engenheiro Eletricista">Engenheiro Eletricista</option>
-                            <option value="Engenheiro Mecânico">Engenheiro Mecânico</option>
-                            <option value="Engenheiro de Produção">Engenheiro de Produção</option>
-                            <option value="Arquiteto Urbanista">Arquiteto Urbanista</option>
-                            <option value="Técnico em Edificações">Técnico em Edificações</option>
-                            <option value="Técnico em Mecatrônica">Técnico em Mecatrônica</option>
-                        </optgroup>
+              <optgroup label="SAÚDE E MEDICINA">
+                <option value="Médico Clínico Geral">
+                  Médico Clínico Geral
+                </option>
+                <option value="Enfermeiro Padrão">Enfermeiro Padrão</option>
+                <option value="Técnico em Enfermagem">
+                  Técnico em Enfermagem
+                </option>
+                <option value="Fisioterapeuta">Fisioterapeuta</option>
+                <option value="Farmacêutico">Farmacêutico</option>
+                <option value="Psicólogo Clínico">Psicólogo Clínico</option>
+                <option value="Nutricionista Esportivo">
+                  Nutricionista Esportivo
+                </option>
+                <option value="Biomédico">Biomédico</option>
+              </optgroup>
 
-                        <optgroup label="ADMINISTRAÇÃO E DIREITO">
-                            <option value="Administrador de Empresas">Administrador de Empresas</option>
-                            <option value="Contador">Contador</option>
-                            <option value="Advogado Civilista">Advogado Civilista</option>
-                            <option value="Advogado Trabalhista">Advogado Trabalhista</option>
-                            <option value="Advogado Criminalista">Advogado Criminalista</option>
-                            <option value="Analista de Recursos Humanos">Analista de RH</option>
-                            <option value="Consultor Jurídico">Consultor Jurídico</option>
-                        </optgroup>
+              <optgroup label="ENGENHARIA E INDÚSTRIA">
+                <option value="Engenheiro Civil">Engenheiro Civil</option>
+                <option value="Engenheiro Eletricista">
+                  Engenheiro Eletricista
+                </option>
+                <option value="Engenheiro Mecânico">Engenheiro Mecânico</option>
+                <option value="Engenheiro de Produção">
+                  Engenheiro de Produção
+                </option>
+                <option value="Arquiteto Urbanista">Arquiteto Urbanista</option>
+                <option value="Técnico em Edificações">
+                  Técnico em Edificações
+                </option>
+                <option value="Técnico em Mecatrônica">
+                  Técnico em Mecatrônica
+                </option>
+              </optgroup>
 
-                        <optgroup label="EDUCAÇÃO">
-                            <option value="Professor de Ensino Superior">Professor Universitário</option>
-                            <option value="Professor de Ensino Médio/Fundamental">Professor</option>
-                            <option value="Pedagogo">Pedagogo</option>
-                            <option value="Coordenador Pedagógico">Coordenador Pedagógico</option>
-                        </optgroup>
-                    </select>
-                </div>
+              <optgroup label="ADMINISTRAÇÃO E DIREITO">
+                <option value="Administrador de Empresas">
+                  Administrador de Empresas
+                </option>
+                <option value="Contador">Contador</option>
+                <option value="Advogado Civilista">Advogado Civilista</option>
+                <option value="Advogado Trabalhista">
+                  Advogado Trabalhista
+                </option>
+                <option value="Advogado Criminalista">
+                  Advogado Criminalista
+                </option>
+                <option value="Analista de Recursos Humanos">
+                  Analista de RH
+                </option>
+                <option value="Consultor Jurídico">Consultor Jurídico</option>
+              </optgroup>
+
+              <optgroup label="EDUCAÇÃO">
+                <option value="Professor de Ensino Superior">
+                  Professor Universitário
+                </option>
+                <option value="Professor de Ensino Médio/Fundamental">
+                  Professor
+                </option>
+                <option value="Pedagogo">Pedagogo</option>
+                <option value="Coordenador Pedagógico">
+                  Coordenador Pedagógico
+                </option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-card">
+          <h3><i class="fas fa-id-card"></i> Identificação e Contato</h3>
+          <input
+            type="text"
+            id="f-nome"
+            placeholder="Nome Completo"
+            class="full-input"
+            oninput="sync()"
+          />
+          <input
+            type="text"
+            id="f-local"
+            placeholder="Cidade/Estado (Ex: Manaus, AM)"
+            class="full-input"
+            oninput="sync()"
+          />
+          <input
+            type="email"
+            id="f-email"
+            placeholder="E-mail Profissional"
+            class="full-input"
+            oninput="sync()"
+          />
+          <input
+            type="tel"
+            id="f-tel"
+            placeholder="Telefone / WhatsApp"
+            class="full-input"
+            oninput="sync()"
+          />
+          <input
+            type="text"
+            id="f-linkedin"
+            placeholder="URL LinkedIn"
+            class="full-input"
+            oninput="sync()"
+          />
+          <input
+            type="text"
+            id="f-github"
+            placeholder="URL GitHub / Portfólio"
+            class="full-input"
+            oninput="sync()"
+          />
+        </div>
+
+        <div class="input-card">
+          <div class="check-group">
+            <input type="checkbox" id="pcd-toggle" onchange="togglePcd()" />
+            <label for="pcd-toggle">Candidato PcD</label>
+          </div>
+          <div id="pcd-form" class="hidden-pcd">
+            <input
+              type="text"
+              id="f-pcd-cid"
+              placeholder="CID e Deficiência"
+              class="full-input"
+              oninput="sync()"
+            />
+            <textarea
+              id="f-pcd-nec"
+              placeholder="Necessidades de Acessibilidade"
+              rows="2"
+              class="full-input"
+              oninput="sync()"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="input-card">
+          <h3><i class="fas fa-history"></i> Experiência Profissional</h3>
+          <div id="exp-inputs-list"></div>
+          <button type="button" class="btn-add" onclick="addBlock('exp')">
+            + Adicionar Experiência
+          </button>
+        </div>
+
+        <div class="input-card">
+          <h3><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h3>
+          <div id="edu-inputs-list"></div>
+          <button
+            type="button"
+            class="btn-add btn-green"
+            onclick="addBlock('edu')"
+          >
+            + Adicionar Formação
+          </button>
+        </div>
+
+        <div class="input-card">
+          <h3><i class="fas fa-certificate"></i> Cursos e Certificações</h3>
+          <div id="course-inputs-list"></div>
+          <button
+            type="button"
+            class="btn-add btn-blue"
+            onclick="addBlock('course')"
+          >
+            + Adicionar Curso
+          </button>
+        </div>
+
+        <div class="input-card">
+          <h3><i class="fas fa-star"></i> Habilidades Técnicas</h3>
+          <div id="skill-inputs-list" class="skills-input-grid"></div>
+          <button
+            type="button"
+            class="btn-add btn-blue"
+            onclick="addSkillInput()"
+          >
+            + Nova Skill
+          </button>
+        </div>
+
+        <button
+          class="btn-generate"
+          type="button"
+          onclick="gerarPdfOuImprimir()"
+        >
+          IMPRIMIR EM PDF
+        </button>
+      </aside>
+
+      <main class="preview">
+        <div class="a4-page" id="cv-render">
+          <header class="cv-header-paper">
+            <h1 id="p-nome">MAURICIO DE SOUZA PEIXOTO</h1>
+            <h2 id="p-cargo">DESENVOLVEDOR FULL STACK</h2>
+            <div class="contact-line">
+              <span id="p-contato">Cidade | E-mail | Telefone</span>
             </div>
+            <div class="social-line" id="p-links"></div>
+          </header>
 
-            <div class="input-card">
-                <h3><i class="fas fa-id-card"></i> Identificação e Contato</h3>
-                <input type="text" id="f-nome" placeholder="Nome Completo" class="full-input" oninput="sync()">
-                <input type="text" id="f-local" placeholder="Cidade/Estado (Ex: Manaus, AM)" class="full-input" oninput="sync()">
-                <input type="email" id="f-email" placeholder="E-mail Profissional" class="full-input" oninput="sync()">
-                <input type="tel" id="f-tel" placeholder="Telefone / WhatsApp" class="full-input" oninput="sync()">
-                <input type="text" id="f-linkedin" placeholder="URL LinkedIn" class="full-input" oninput="sync()">
-                <input type="text" id="f-github" placeholder="URL GitHub / Portfólio" class="full-input" oninput="sync()">
-            </div>
+          <div id="p-pcd-area" class="pcd-alert hidden-pcd">
+            <strong>PCD:</strong> <span id="p-pcd-info"></span>
+          </div>
 
-            <div class="input-card">
-                <div class="check-group">
-                    <input type="checkbox" id="pcd-toggle" onchange="togglePcd()">
-                    <label for="pcd-toggle">Candidato PcD</label>
-                </div>
-                <div id="pcd-form" class="hidden-pcd">
-                    <input type="text" id="f-pcd-cid" placeholder="CID e Deficiência" class="full-input" oninput="sync()">
-                    <textarea id="f-pcd-nec" placeholder="Necessidades de Acessibilidade" rows="2" class="full-input" oninput="sync()"></textarea>
-                </div>
-            </div>
+          <div class="cv-body-content">
+            <section class="cv-block">
+              <h3 class="section-title">Experiência Profissional</h3>
+              <div id="p-exp-render"></div>
+            </section>
 
-            <div class="input-card">
-                <h3><i class="fas fa-history"></i> Experiência Profissional</h3>
-                <div id="exp-inputs-list"></div>
-                <button type="button" class="btn-add" onclick="addBlock('exp')">+ Adicionar Experiência</button>
-            </div>
+            <section class="cv-block">
+              <h3 class="section-title">Formação Acadêmica</h3>
+              <div id="p-edu-render"></div>
+            </section>
 
-            <div class="input-card">
-                <h3><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h3>
-                <div id="edu-inputs-list"></div>
-                <button type="button" class="btn-add btn-green" onclick="addBlock('edu')">+ Adicionar Formação</button>
-            </div>
+            <section class="cv-block">
+              <h3 class="section-title">Cursos e Certificações</h3>
+              <div id="p-course-render"></div>
+            </section>
 
-            <div class="input-card">
-                <h3><i class="fas fa-certificate"></i> Cursos e Certificações</h3>
-                <div id="course-inputs-list"></div>
-                <button type="button" class="btn-add btn-blue" onclick="addBlock('course')">+ Adicionar Curso</button>
-            </div>
-
-            <div class="input-card">
-                <h3><i class="fas fa-star"></i> Habilidades Técnicas</h3>
-                <div id="skill-inputs-list" class="skills-input-grid"></div>
-                <button type="button" class="btn-add btn-blue" onclick="addSkillInput()">+ Nova Skill</button>
-            </div>
-
-            <button class="btn-generate" type="button" onclick="gerarPdfOuImprimir()">IMPRIMIR EM PDF</button>
-        </aside>
-
-        <main class="preview">
-            <div class="a4-page" id="cv-render">
-                <header class="cv-header-paper">
-                    <h1 id="p-nome">MAURICIO DE SOUZA PEIXOTO</h1>
-                    <h2 id="p-cargo">DESENVOLVEDOR FULL STACK</h2>
-                    <div class="contact-line">
-                        <span id="p-contato">Cidade | E-mail | Telefone</span>
-                    </div>
-                    <div class="social-line" id="p-links"></div>
-                </header>
-
-                <div id="p-pcd-area" class="pcd-alert hidden-pcd">
-                    <strong>PCD:</strong> <span id="p-pcd-info"></span>
-                </div>
-
-                <div class="cv-body-content">
-                    <section class="cv-block">
-                        <h3 class="section-title">Experiência Profissional</h3>
-                        <div id="p-exp-render"></div>
-                    </section>
-
-                    <section class="cv-block">
-                        <h3 class="section-title">Formação Acadêmica</h3>
-                        <div id="p-edu-render"></div>
-                    </section>
-
-                    <section class="cv-block">
-                        <h3 class="section-title">Cursos e Certificações</h3>
-                        <div id="p-course-render"></div>
-                    </section>
-
-                    <section class="cv-block">
-                        <h3 class="section-title">Competências Técnicas</h3>
-                        <div id="p-skills-render" class="skills-flex-paper"></div>
-                    </section>
-                </div>
-            </div>
-        </main>
+            <section class="cv-block">
+              <h3 class="section-title">Competências Técnicas</h3>
+              <div id="p-skills-render" class="skills-flex-paper"></div>
+            </section>
+          </div>
+        </div>
+      </main>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
