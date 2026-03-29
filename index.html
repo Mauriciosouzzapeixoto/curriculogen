@@ -164,6 +164,22 @@
         </div>
 
         <div class="input-card">
+          <h3><i class="fas fa-camera"></i> Foto de Perfil</h3>
+          <div class="photo-upload-container">
+            <input type="file" id="f-foto" accept="image/*" onchange="handlePhotoUpload(event)" class="hidden" />
+            <label for="f-foto" class="photo-upload-label">
+              <div class="photo-preview" id="photo-preview">
+                <i class="fas fa-camera"></i>
+                <span>Clique para adicionar foto</span>
+              </div>
+            </label>
+            <button type="button" onclick="removePhoto()" class="btn-remove-photo hidden" id="btn-remove-photo">
+              <i class="fas fa-trash"></i> Remover foto
+            </button>
+          </div>
+        </div>
+
+        <div class="input-card">
           <h3><i class="fas fa-id-card"></i> Identificação e Contato</h3>
           <input
             type="text"
@@ -288,12 +304,24 @@
       <main class="preview">
         <div class="a4-page" id="cv-render">
           <header class="cv-header-paper">
-            <h1 id="p-nome">MAURICIO DE SOUZA PEIXOTO</h1>
-            <h2 id="p-cargo">DESENVOLVEDOR FULL STACK</h2>
-            <div class="contact-line">
-              <span id="p-contato">Cidade | E-mail | Telefone</span>
+            <div class="cv-header-content">
+              <div class="cv-text-info">
+                <h1 id="p-nome">NOME COMPLETO</h1>
+                <h2 id="p-cargo">CARGO PRETENDIDO</h2>
+                <div class="contact-line">
+                  <span id="p-contato">Cidade | E-mail | Telefone</span>
+                </div>
+                <div class="social-line" id="p-links"></div>
+              </div>
+              <div class="cv-photo-container">
+                <div class="cv-photo-frame" id="cv-photo-frame">
+                  <img id="cv-photo" src="" alt="" class="hidden" />
+                  <div id="cv-photo-placeholder" class="photo-placeholder">
+                    <i class="fas fa-user"></i>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="social-line" id="p-links"></div>
           </header>
 
           <div id="p-pcd-area" class="pcd-alert hidden-pcd">

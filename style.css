@@ -62,6 +62,124 @@ body { font-family: 'Inter', sans-serif; background: #f1f5f9; margin: 0; color: 
 
 .hidden-pcd { display: none; }
 
+/* Foto de Perfil */
+.photo-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.hidden { display: none !important; }
+
+.photo-upload-label {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.photo-preview {
+    border: 2px dashed var(--spark-border);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background: #f8fafc;
+    transition: all 0.3s ease;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-preview:hover {
+    border-color: var(--spark-blue);
+    background: #f0f9ff;
+}
+
+.photo-preview i {
+    font-size: 2rem;
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.photo-preview span {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.photo-preview img {
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.btn-remove-photo {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s ease;
+}
+
+.btn-remove-photo:hover {
+    background: #dc2626;
+}
+
+/* Layout do Currículo com Foto */
+.cv-header-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.cv-text-info {
+    flex: 1;
+}
+
+.cv-photo-container {
+    flex-shrink: 0;
+}
+
+.cv-photo-frame {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--spark-dark);
+    overflow: hidden;
+    position: relative;
+    background: #f8fafc;
+}
+
+.cv-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e2e8f0;
+    color: #64748b;
+}
+
+.photo-placeholder i {
+    font-size: 2rem;
+}
+
 /* Regras de Impressão */
 @media print {
     body { background: white; }
@@ -69,4 +187,210 @@ body { font-family: 'Inter', sans-serif; background: #f1f5f9; margin: 0; color: 
     .main-wrapper { display: block; }
     .preview { padding: 0; background: white; }
     .a4-page { box-shadow: none; width: 100%; margin: 0; }
+    .cv-header-content {
+        gap: 20px;
+    }
+    
+    .cv-photo-frame {
+        width: 100px;
+        height: 100px;
+    }
+}
+:root {
+    --spark-dark: #0f172a;
+    --spark-blue: #2563eb;
+    --spark-green: #10b981;
+    --spark-border: #e2e8f0;
+    --white: #ffffff;
+}
+
+body { font-family: 'Inter', sans-serif; background: #f1f5f9; margin: 0; color: #1e293b; overflow: hidden; }
+
+/* Navbar */
+.navbar-spark {
+    background: #ffffff;
+    color: #1e293b;
+    padding: 12px 32px;
+    border-bottom: 2px solid var(--spark-dark);
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+.brand {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+.brand h1 {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 800;
+}
+
+/* Layout Base */
+.main-wrapper { display: grid; grid-template-columns: 420px 1fr; height: calc(100vh - 80px); }
+
+/* Editor */
+.editor { background: var(--white); border-right: 1px solid var(--spark-border); padding: 25px; overflow-y: auto; }
+.input-card { background: #f8fafc; border: 1px solid var(--spark-border); padding: 18px; border-radius: 12px; margin-bottom: 20px; }
+.input-card h3 { margin: 0 0 15px 0; font-size: 0.95rem; text-transform: uppercase; color: var(--spark-dark); border-bottom: 2px solid var(--spark-border); padding-bottom: 8px; }
+
+.full-input { width: 100%; padding: 10px; margin-bottom: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; }
+.input-block-item { position: relative; background: white; padding: 12px; border: 1px dashed #94a3b8; border-radius: 8px; margin-bottom: 10px; }
+.btn-del { position: absolute; right: -8px; top: -8px; background: #ef4444; color: white; border: none; border-radius: 50%; cursor: pointer; width: 22px; height: 22px; }
+
+.btn-add { width: 100%; padding: 10px; background: var(--spark-dark); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-top: 5px; }
+.btn-green { background: var(--spark-green); } .btn-blue { background: var(--spark-blue); }
+.btn-generate { width: 100%; padding: 18px; background: var(--spark-blue); color: white; border: none; border-radius: 12px; font-weight: 800; font-size: 1.1rem; cursor: pointer; margin-top: 10px; }
+
+/* Preview A4 */
+.preview { padding: 40px; background: #64748b; display: flex; justify-content: center; overflow-y: auto; }
+.a4-page { background: var(--white); width: 210mm; min-height: 297mm; padding: 20mm; box-shadow: 0 10px 40px rgba(0,0,0,0.3); box-sizing: border-box; }
+.cv-header-paper { text-align: center; border-bottom: 3px solid var(--spark-dark); padding-bottom: 20px; }
+.section-title { border-bottom: 2px solid var(--spark-blue); color: var(--spark-blue); text-transform: uppercase; font-size: 1rem; margin-top: 25px; padding-bottom: 5px; }
+.badge-skill { background: #f1f5f9; border: 1px solid #cbd5e1; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin: 4px; display: inline-block; font-weight: 700; }
+.cv-item-block { margin-top: 12px; }
+.cv-item-block p { margin: 2px 0; color: #475569; }
+
+.hidden-pcd { display: none; }
+
+/* Foto de Perfil */
+.photo-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.hidden { display: none !important; }
+
+.photo-upload-label {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.photo-preview {
+    border: 2px dashed var(--spark-border);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background: #f8fafc;
+    transition: all 0.3s ease;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-preview:hover {
+    border-color: var(--spark-blue);
+    background: #f0f9ff;
+}
+
+.photo-preview i {
+    font-size: 2rem;
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.photo-preview span {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.photo-preview img {
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.btn-remove-photo {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s ease;
+}
+
+.btn-remove-photo:hover {
+    background: #dc2626;
+}
+
+/* Layout do Currículo com Foto */
+.cv-header-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.cv-text-info {
+    flex: 1;
+}
+
+.cv-photo-container {
+    flex-shrink: 0;
+}
+
+.cv-photo-frame {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--spark-dark);
+    overflow: hidden;
+    position: relative;
+    background: #f8fafc;
+}
+
+.cv-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e2e8f0;
+    color: #64748b;
+}
+
+.photo-placeholder i {
+    font-size: 2rem;
+}
+
+/* Regras de Impressão */
+@media print {
+    body { background: white; }
+    .editor, .navbar-spark { display: none; }
+    .main-wrapper { display: block; }
+    .preview { padding: 0; background: white; }
+    .a4-page { box-shadow: none; width: 100%; margin: 0; }
+    .cv-header-content {
+        gap: 20px;
+    }
+    
+    .cv-photo-frame {
+        width: 100px;
+        height: 100px;
+    }
 }

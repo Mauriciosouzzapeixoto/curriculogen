@@ -3,6 +3,55 @@
  * Mauricio Peixoto | Linhagem SPARK
  */
 
+let profilePhotoData = null;
+
+function handlePhotoUpload(event) {
+    const file = event.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            profilePhotoData = e.target.result;
+            updatePhotoPreview();
+            updateCVPhoto();
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
+function updatePhotoPreview() {
+    const preview = document.getElementById('photo-preview');
+    const removeBtn = document.getElementById('btn-remove-photo');
+    
+    if (profilePhotoData) {
+        preview.innerHTML = `<img src="${profilePhotoData}" alt="Foto" />`;
+        removeBtn.classList.remove('hidden');
+    } else {
+        preview.innerHTML = '<i class="fas fa-camera"></i><span>Clique para adicionar foto</span>';
+        removeBtn.classList.add('hidden');
+    }
+}
+
+function updateCVPhoto() {
+    const cvPhoto = document.getElementById('cv-photo');
+    const placeholder = document.getElementById('cv-photo-placeholder');
+    
+    if (profilePhotoData) {
+        cvPhoto.src = profilePhotoData;
+        cvPhoto.classList.remove('hidden');
+        placeholder.classList.add('hidden');
+    } else {
+        cvPhoto.classList.add('hidden');
+        placeholder.classList.remove('hidden');
+    }
+}
+
+function removePhoto() {
+    profilePhotoData = null;
+    document.getElementById('f-foto').value = '';
+    updatePhotoPreview();
+    updateCVPhoto();
+}
+
 function sync() {
     // Dados Básicos
     document.getElementById('p-nome').innerText = document.getElementById('f-nome').value.toUpperCase() || "NOME COMPLETO";
